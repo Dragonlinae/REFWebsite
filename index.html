@@ -1,0 +1,409 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <title>Ripple Effects Foundation</title>
+  <link rel="stylesheet" type="text/css" href="css/core.css">
+  <link rel="stylesheet" type="text/css" href="css/style.css">
+</head>
+
+<body>
+
+  <!-- ============================================ -->
+  <!--                 Navigation                   -->
+  <!-- ============================================ -->
+
+  <header id="cs-navigation">
+    <div class="cs-container">
+      <!--Nav Logo-->
+      <a href="index.html" class="cs-logo" aria-label="back to home">
+        <img src="img/logo.jpg" alt="logo" aria-hidden="true" decoding="async">
+      </a>
+      <!--Navigation List-->
+      <nav class="cs-nav" role="navigation">
+        <!--Mobile Nav Toggle-->
+        <button class="cs-toggle" aria-label="mobile menu toggle">
+          <div class="cs-box" aria-hidden="true">
+            <span class="cs-line cs-line1" aria-hidden="true"></span>
+            <span class="cs-line cs-line2" aria-hidden="true"></span>
+            <span class="cs-line cs-line3" aria-hidden="true"></span>
+          </div>
+        </button>
+        <!-- We need a wrapper div so we can set a fixed height on the cs-ul in case the nav list gets too long from too many dropdowns being opened and needs to have an overflow scroll. This wrapper acts as the background so it can go the full height of the screen and not cut off any overflowing nav items while the cs-ul stops short of the bottom of the screen, which keeps all nav items in view no matter how mnay there are-->
+        <div class="cs-ul-wrapper">
+          <ul id="cs-expanded" class="cs-ul" aria-expanded="false">
+            <li class="cs-li">
+              <a href="#home" class="cs-li-link cs-active">
+                Home
+              </a>
+            </li>
+            <li class="cs-li">
+              <a href="#about" class="cs-li-link">
+                About
+              </a>
+            </li>
+            <li class="cs-li">
+              <a href="#volunteer" class="cs-li-link">
+                Volunteering Opportunities
+              </a>
+            </li>
+            <li class="cs-li">
+              <a href="#events" class="cs-li-link">
+                Events
+              </a>
+            </li>
+            <li class="cs-li">
+              <a href="#support" class="cs-li-link">
+                Support Us
+              </a>
+            </li>
+          </ul>
+        </div>
+      </nav>
+      <a href="classes.html" class="cs-button-solid cs-nav-button">Classes ⎘</a>
+    </div>
+  </header>
+
+
+  <!-- ============================================ -->
+  <!--                  Home                        -->
+  <!-- ============================================ -->
+
+  <section id="home">
+    <div class="cs-container">
+      <div class="cs-content">
+        <span class="cs-topper">Slogan Here</span>
+        <h1 class="cs-title gradient-text">Ripple Effects Foundation</h1>
+        <p class="cs-text">
+          Blurb Here
+        </p>
+        <div class="cs-button-group">
+          <a href="" class="cs-button-solid cs-button1">Find Classes</a>
+        </div>
+      </div>
+    </div>
+
+    <!-- Background Image -->
+    <picture class="cs-background">
+      <source media="(max-width: 600px)" srcset="img/FrogBuilding.jpg">
+      <source media="(min-width: 601px)" srcset="img/FrogBuilding.jpg">
+      <img loading="lazy" decoding="async" src="img/FrogBuilding.jpg" alt="field" width="1920" height="1200"
+        aria-hidden="true">
+    </picture>
+  </section>
+
+
+  <!-- ============================================ -->
+  <!--                   About                      -->
+  <!-- ============================================ -->
+
+  <section id="about">
+    <div class="cs-container">
+      <div class="cs-image-group">
+        <picture class="cs-picture">
+          <!--Mobile Image-->
+          <source media="(max-width: 600px)" srcset="img/FrogBusiness.jpg">
+          <!--Tablet and above Image-->
+          <source media="(min-width: 601px)" srcset="img/FrogBusiness.jpg">
+          <img loading="lazy" decoding="async" src="img/FrogBusiness.jpg" alt="business" width="324" height="467">
+        </picture>
+      </div>
+      <div class="cs-content">
+        <span class="cs-topper">About us</span>
+        <h2 class="cs-title">Who We Are</h2>
+        <p class="cs-text-large">
+          Insert About Us Here
+        </p>
+        <h2 class="cs-title">Our Mission</h2>
+        <p class="cs-text-large">
+          Insert Mission Statement Here
+        </p>
+      </div>
+    </div>
+  </section>
+
+
+
+  <!-- ============================================ -->
+  <!--                Volunteer 1                   -->
+  <!-- ============================================ -->
+
+  <section id="volunteer">
+    <div class="cs-container">
+      <div class="cs-image-group">
+        <!--Top left image-->
+        <picture class="cs-picture cs-picture1">
+          <!--Mobile Image-->
+          <source media="(max-width: 600px)" srcset="img/FrogProgramming.jpg">
+          <!--Tablet and above Image-->
+          <source media="(min-width: 601px)" srcset="img/FrogProgramming.jpg">
+          <img loading="lazy" decoding="async" src="img/FrogProgramming.jpg" alt="mechanic" width="413" height="500">
+        </picture>
+        <!--Top Right image-->
+        <picture class="cs-picture cs-picture2">
+          <!--Mobile Image-->
+          <source media="(max-width: 600px)" srcset="img/FrogGroup.jpg">
+          <!--Tablet and above Image-->
+          <source media="(min-width: 601px)" srcset="img/FrogGroup.jpg">
+          <img loading="lazy" decoding="async" src="img/FrogGroup.jpg" alt="mechanic" width="413" height="280">
+        </picture>
+      </div>
+      <div class="cs-content">
+        <span class="cs-topper">Volunteer Opportunities</span>
+        <h2 class="cs-title">Presidential Volunteer Service Award</h2>
+        <p class="cs-text">
+          Description of Presidential Volunteer Service Award
+        </p>
+        <a href="" class="cs-button-solid">More Info On PVSA</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============================================ -->
+  <!--                 Volunteer 2                  -->
+  <!-- ============================================ -->
+
+  <section id="volunteer2">
+    <div class="cs-container">
+      <div class="cs-image-group">
+        <!--Top left image-->
+        <picture class="cs-picture cs-picture1">
+          <!--Mobile Image-->
+          <source media="(max-width: 600px)" srcset="img/FrogProgramming.jpg">
+          <!--Tablet and above Image-->
+          <source media="(min-width: 601px)" srcset="img/FrogProgramming.jpg">
+          <img loading="lazy" decoding="async" src="img/FrogProgramming.jpg" alt="mechanic" width="413" height="500">
+        </picture>
+        <!--Top Right image-->
+        <picture class="cs-picture cs-picture2">
+          <!--Mobile Image-->
+          <source media="(max-width: 600px)" srcset="img/FrogGroup.jpg">
+          <!--Tablet and above Image-->
+          <source media="(min-width: 601px)" srcset="img/FrogGroup.jpg">
+          <img loading="lazy" decoding="async" src="img/FrogGroup.jpg" alt="mechanic" width="413" height="280">
+        </picture>
+      </div>
+      <div class="cs-content">
+        <span class="cs-topper">Volunteer Opportunities</span>
+        <h2 class="cs-title">Volunteering Opporunity 2</h2>
+        <p class="cs-text">
+          Description of Volunteering Opportunity 2
+        </p>
+        <a href="" class="cs-button-solid">Link to more info</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============================================ -->
+  <!--                Volunteer 3                   -->
+  <!-- ============================================ -->
+
+  <section id="volunteer3">
+    <div class="cs-container">
+      <div class="cs-image-group">
+        <!--Top left image-->
+        <picture class="cs-picture cs-picture1">
+          <!--Mobile Image-->
+          <source media="(max-width: 600px)" srcset="img/FrogProgramming.jpg">
+          <!--Tablet and above Image-->
+          <source media="(min-width: 601px)" srcset="img/FrogProgramming.jpg">
+          <img loading="lazy" decoding="async" src="img/FrogProgramming.jpg" alt="mechanic" width="413" height="500">
+        </picture>
+        <!--Top Right image-->
+        <picture class="cs-picture cs-picture2">
+          <!--Mobile Image-->
+          <source media="(max-width: 600px)" srcset="img/FrogGroup.jpg">
+          <!--Tablet and above Image-->
+          <source media="(min-width: 601px)" srcset="img/FrogGroup.jpg">
+          <img loading="lazy" decoding="async" src="img/FrogGroup.jpg" alt="mechanic" width="413" height="280">
+        </picture>
+      </div>
+      <div class="cs-content">
+        <span class="cs-topper">Volunteering Opportunities</span>
+        <h2 class="cs-title">Volunteering Opportunity 3</h2>
+        <p class="cs-text">
+          Description of Volunteering Opportunity 3
+        </p>
+        <a href="" class="cs-button-solid">Link to more info</a>
+      </div>
+    </div>
+  </section>
+
+
+
+  <!-- ============================================ -->
+  <!--                    Events                    -->
+  <!-- ============================================ -->
+
+  <section id="events">
+    <div class="cs-container">
+      <div class="cs-content">
+        <span class="cs-topper">Events</span>
+        <h2 class="cs-title">Camps and Workshops</h2>
+        <p class="cs-text">
+          Description about the camps and workshops
+        </p>
+      </div>
+      <div class="cs-image-group">
+        <!-- Image 1 -->
+        <a class="cs-item" href="">
+          <picture class="cs-picture">
+            <source media="(max-width: 600px)" srcset="img/Frog1.jpg">
+            <source media="(min-width: 601px)" srcset="img/Frog1.jpg">
+            <img loading="lazy" decoding="async" src="img/Frog1.jpg" alt="fancy house" width="346" height="346">
+          </picture>
+          <!-- Hover Box -->
+          <div class="cs-hover-box">
+            <picture class="cs-icon">
+              <img loading="lazy" decoding="async" src="img/arrow.svg" alt="fancy house" width="20" height="20"
+                aria-hidden="true">
+            </picture>
+            <h3 class="cs-h3">Camp 1</h3>
+            <p class="cs-hover-box-text">
+              Camp 1 Description
+            </p>
+          </div>
+        </a>
+        <!-- Image 2 -->
+        <a class="cs-item" href="">
+          <picture class="cs-picture">
+            <source media="(max-width: 600px)" srcset="img/Frog2.jpg">
+            <source media="(min-width: 601px)" srcset="img/Frog2.jpg">
+            <img loading="lazy" decoding="async" src="img/Frog2.jpg" alt="modern house" width="346" height="346">
+          </picture>
+          <!-- Hover Box -->
+          <div class="cs-hover-box">
+            <picture class="cs-icon">
+              <img loading="lazy" decoding="async" src="img/arrow.svg" alt="fancy house" width="20" height="20"
+                aria-hidden="true">
+            </picture>
+            <h3 class="cs-h3">Camp 2</h3>
+            <p class="cs-hover-box-text">
+              Camp 2 Description
+            </p>
+          </div>
+        </a>
+        <!-- Image 3 -->
+        <a class="cs-item" href="">
+          <picture class="cs-picture">
+            <source media="(max-width: 600px)" srcset="img/Frog3.jpg">
+            <source media="(min-width: 601px)" srcset="img/Frog3.jpg">
+            <img aria-hidden="true" loading="lazy" decoding="async" src="img/Frog3.jpg" alt="modern home at night"
+              width="346" height="346">
+          </picture>
+          <!-- Hover Box -->
+          <div class="cs-hover-box">
+            <picture class="cs-icon">
+              <img loading="lazy" decoding="async" src="img/arrow.svg" alt="fancy house" width="20" height="20"
+                aria-hidden="true">
+            </picture>
+            <h3 class="cs-h3">Camp 3</h3>
+            <p class="cs-hover-box-text">
+              Camp 3 Description
+            </p>
+          </div>
+        </a>
+        <!-- Image 4 -->
+        <a class="cs-item" href="">
+          <picture class="cs-picture">
+            <source media="(max-width: 600px)" srcset="img/Frog4.jpg">
+            <source media="(min-width: 601px)" srcset="img/Frog4.jpg">
+            <img aria-hidden="true" loading="lazy" decoding="async" src="img/Frog4.jpg" alt="modern home" width="346"
+              height="346">
+          </picture>
+          <!-- Hover Box -->
+          <div class="cs-hover-box">
+            <picture class="cs-icon">
+              <img loading="lazy" decoding="async" src="img/arrow.svg" alt="fancy house" width="20" height="20"
+                aria-hidden="true">
+            </picture>
+            <h3 class="cs-h3">Workshop 1</h3>
+            <p class="cs-hover-box-text">
+              Workshop 1 Description
+            </p>
+          </div>
+        </a>
+        <!-- Image 5 -->
+        <a class="cs-item" href="">
+          <picture class="cs-picture">
+            <source media="(max-width: 600px)" srcset="img/Frog5.jpg">
+            <source media="(min-width: 601px)" srcset="img/Frog5.jpg">
+            <img aria-hidden="true" loading="lazy" decoding="async" src="img/Frog5.jpg" alt="appliance" width="346"
+              height="346">
+          </picture>
+          <!-- Hover Box -->
+          <div class="cs-hover-box">
+            <picture class="cs-icon">
+              <img loading="lazy" decoding="async" src="img/arrow.svg" alt="fancy house" width="20" height="20"
+                aria-hidden="true">
+            </picture>
+            <h3 class="cs-h3">Workshop 2</h3>
+            <p class="cs-hover-box-text">
+              Workshop 2 Description
+            </p>
+          </div>
+        </a>
+        <!-- Image 6 -->
+        <a class="cs-item" href="">
+          <picture class="cs-picture">
+            <source media="(max-width: 600px)" srcset="img/Frog7.jpg">
+            <source media="(min-width: 601px)" srcset="img/Frog7.jpg">
+            <img aria-hidden="true" loading="lazy" decoding="async" src="img/Frog7.jpg" alt="modern home" width="346"
+              height="346">
+          </picture>
+          <!-- Hover Box -->
+          <div class="cs-hover-box">
+            <picture class="cs-icon">
+              <img loading="lazy" decoding="async" src="img/arrow.svg" alt="fancy house" width="20" height="20"
+                aria-hidden="true">
+            </picture>
+            <h3 class="cs-h3">Workshop 3</h3>
+            <p class="cs-hover-box-text">
+              Workshop 3 Description
+            </p>
+          </div>
+        </a>
+      </div>
+    </div>
+  </section>
+
+
+
+  <!-- ============================================ -->
+  <!--                    Support                   -->
+  <!-- ============================================ -->
+
+  <section id="support">
+    <div class="cs-container">
+      <div class="cs-content">
+        <span class="cs-topper">Support</span>
+        <h2 class="cs-title">Support the Ripple Effects Foundation!</h2>
+        <p class="cs-text">
+          Message about donation and thank you for support
+        </p>
+        <h2 class="cs-topper">Fundraiser 1</h2>
+        <p class="cs-text">
+          Method for Fundraising
+        </p>
+        <h2 class="cs-topper">Fundraiser 2</h2>
+        <p class="cs-text">
+          Method for Fundraising 2
+        </p>
+      </div>
+    </div>
+    <!--Background Image-->
+    <picture class="cs-background">
+      <source media="(max-width: 600px)" srcset="img/FrogBusiness.jpg">
+      <source media="(min-width: 601px)" srcset="img/FrogBusiness.jpg">
+      <img loading="lazy" decoding="async" src="img/FrogBusiness.jpg" alt="meeting" width="1920" height="486"
+        aria-hidden="true">
+    </picture>
+  </section>
+
+
+  <script src="js/script.js"></script>
+  <script src="js/navbar.js"></script>
+
+</body>
+
+</html>
