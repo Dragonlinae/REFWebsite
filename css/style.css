@@ -3,11 +3,17 @@
 <--- -------------------------- -*/
 /* Mobile - 1023px */
 @media only screen and (max-width: 63.9375rem) {
+
+  section {
+    margin-top: 8rem;
+  }
+
   body.cs-open {
     overflow: hidden;
   }
 
   #cs-navigation {
+    top: 0;
     width: 100%;
     /* prevents padding and border from affecting height and width */
     box-sizing: border-box;
@@ -281,7 +287,13 @@
 <--- -------------------------- -*/
 /* Small Desktop - 1024px */
 @media only screen and (min-width: 64rem) {
+
+  section {
+    margin-top: 5rem;
+  }
+
   #cs-navigation {
+    top: 0;
     width: 100%;
     /* prevents padding and border from affecting height and width */
     box-sizing: border-box;
@@ -416,8 +428,6 @@
 }
 
 
-
-
 /*-- -------------------------- -->
 <---          Home              -->
 <--- -------------------------- -*/
@@ -469,6 +479,12 @@
     justify-content: center;
     flex-wrap: wrap;
     gap: 0.5rem;
+    padding-inline: 1rem;
+  }
+
+  #home .cs-button-row {
+    display: flex;
+    justify-content: center;
   }
 
   #home .cs-button-solid {

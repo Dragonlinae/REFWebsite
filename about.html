@@ -33,12 +33,12 @@
         <div class="cs-ul-wrapper">
           <ul id="cs-expanded" class="cs-ul" aria-expanded="false">
             <li class="cs-li">
-              <a href="index.html" class="cs-li-link cs-active">
+              <a href="index.html" class="cs-li-link">
                 Home
               </a>
             </li>
             <li class="cs-li">
-              <a href="about.html" class="cs-li-link">
+              <a href="about.html" class="cs-li-link cs-active">
                 About
               </a>
             </li>
@@ -64,37 +64,33 @@
     </div>
   </header>
 
-
   <!-- ============================================ -->
-  <!--                  Home                        -->
+  <!--                   About                      -->
   <!-- ============================================ -->
 
-  <section id="home">
+  <section id="about">
     <div class="cs-container">
+      <div class="cs-image-group">
+        <picture class="cs-picture">
+          <!--Mobile Image-->
+          <source media="(max-width: 600px)" srcset="img/FrogBusiness.jpg">
+          <!--Tablet and above Image-->
+          <source media="(min-width: 601px)" srcset="img/FrogBusiness.jpg">
+          <img loading="lazy" decoding="async" src="img/FrogBusiness.jpg" alt="business" width="324" height="467">
+        </picture>
+      </div>
       <div class="cs-content">
-        <span class="cs-topper">Slogan Here</span>
-        <h1 class="cs-title gradient-text">Ripple Effects Foundation</h1>
-        <p class="cs-text">
-          Blurb Here
+        <span class="cs-topper">About us</span>
+        <h2 class="cs-title">Who We Are</h2>
+        <p class="cs-text-large">
+          Insert About Us Here
         </p>
-        <div class="cs-button-row">
-          <div class="cs-button-group">
-            <a href="#support" class="cs-button-solid cs-button1">Donate</a>
-          </div>
-          <div class="cs-button-group">
-            <a href="classes.html" class="cs-button-solid cs-button1">Find Classes</a>
-          </div>
-        </div>
+        <h2 class="cs-title">Our Mission</h2>
+        <p class="cs-text-large">
+          Insert Mission Statement Here
+        </p>
       </div>
     </div>
-
-    <!-- Background Image -->
-    <picture class="cs-background">
-      <source media="(max-width: 600px)" srcset="img/FrogBuilding.jpg">
-      <source media="(min-width: 601px)" srcset="img/FrogBuilding.jpg">
-      <img loading="lazy" decoding="async" src="img/FrogBuilding.jpg" alt="field" width="1920" height="1200"
-        aria-hidden="true">
-    </picture>
   </section>
 
   <script src="js/script.js"></script>
