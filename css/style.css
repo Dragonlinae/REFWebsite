@@ -1407,6 +1407,20 @@
     left: 0;
     object-fit: cover;
   }
+
+  #support .form-box {
+    width: 100%;
+    max-width: 34.375rem;
+    padding: 2rem;
+    background-color: var(--secondary);
+    border-radius: 1.25rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1rem;
+    position: relative;
+    z-index: 1;
+  }
 }
 
 /* Tablet - 768px */

@@ -75,16 +75,34 @@
         <span class="cs-topper">Support</span>
         <h2 class="cs-title">Support the Ripple Effects Foundation!</h2>
         <p class="cs-text">
-          Message about donation and thank you for support
+          Thank you for choosing to support us!
+          <br>
+          Ripple Effects Foundation is a 501(c)3 non-profit organization, EIN
+          99-1209119 and all donations are tax-exempt.
         </p>
         <h2 class="cs-topper">Fundraiser 1</h2>
         <p class="cs-text">
           Method for Fundraising
         </p>
-        <h2 class="cs-topper">Fundraiser 2</h2>
-        <p class="cs-text">
-          Method for Fundraising 2
-        </p>
+        <div class="form-box">
+          <h2 class="cs-topper">Already supported?</h2>
+          <p class="cs-text">
+            Leave your contact information so we can track your donation!
+          </p>
+
+          <!--Form-->
+          <form class="cs-form" id="cs-form" name="Donation Form" method="post">
+            <label class="cs-text">
+              Name
+              <input class="cs-input" required type="text" id="name" name="name" placeholder="John Doe">
+            </label>
+            <label class="cs-text">
+              Email
+              <input class="cs-input" required type="email" id="email" name="email" placeholder="name@company.com">
+            </label>
+            <button class="cs-button-solid" type="submit" id="submitButton">Submit</button>
+          </form>
+        </div>
       </div>
     </div>
     <!--Background Image-->
@@ -98,6 +116,7 @@
 
 
   <script src="js/script.js"></script>
+  <script src="js/support.js"></script>
 
 
 </body>
