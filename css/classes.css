@@ -415,6 +415,12 @@
     border: none;
   }
 
+  #classes .cs-reset {
+    width: 100%;
+    border: none;
+    background-color: darkred;
+  }
+
   #classes .cs-floater1 {
     /* 500px - 710px */
     width: clamp(31.25rem, 50vw, 44.375rem);
@@ -545,6 +551,10 @@
   }
 
   #classes .cs-search .cs-submit {
+    max-width: 13.75rem;
+  }
+
+  #classes .cs-search .cs-reset {
     max-width: 13.75rem;
   }
 }

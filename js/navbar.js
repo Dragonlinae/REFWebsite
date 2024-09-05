@@ -1,4 +1,4 @@
-const divID = ["home", "about", "volunteer", "events", "support"];
+const divID = ["home", "about", "volunteer", "camps", "workshops", "support"];
 
 // on scroll
 document.addEventListener("scroll", function () {

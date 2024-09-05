@@ -276,10 +276,6 @@
   #cs-navigation .cs-li-link.cs-active:before {
     display: block;
   }
-
-  #cs-navigation .cs-button-solid {
-    display: none;
-  }
 }
 
 /*-- -------------------------- -->

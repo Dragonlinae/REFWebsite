@@ -2,18 +2,23 @@ var searchbar = document.getElementById("search-bar");
 var searchbtn = document.getElementById("search-submit");
 var filterbtn = document.getElementById("filter-submit");
 
-const sheets_url = "https://sheets.googleapis.com/v4/spreadsheets/1yEgfyIQXjRFRK1NP7gsAUPf_ZNHdeuvzEKP2mlmRDmk/values/Classes?key=AIzaSyBX3-78oW45d_03ov_QLOOmayHa9C6tjfE";
+const sheets_url = "https://sheets.googleapis.com/v4/spreadsheets/1xCPqsaZqOwbb0KjEMuxBThlMSR84Ae6PooUXf_Z1kzQ/values/Classes?key=AIzaSyBX3-78oW45d_03ov_QLOOmayHa9C6tjfE";
 
 var classes = [];
 var subjectList = new Set();
+var yearsList = new Set();
 
 
 var search = new URLSearchParams(window.location.search).get("search");
 var price_from = new URLSearchParams(window.location.search).get("price_from");
 var price_to = new URLSearchParams(window.location.search).get("price_to");
 var subjects = new URLSearchParams(window.location.search).get("subjects");
+var years = new URLSearchParams(window.location.search).get("years");
 if (subjects != null) {
   subjects = subjects.split(",");
+}
+if (years != null) {
+  years = years.split(",");
 }
 if (search != null) {
   search = decodeURIComponent(search);
@@ -59,6 +64,7 @@ function getClasses() {
         for (var tag of classObj.Tags) {
           subjectList.add(tag);
         }
+        yearsList.add(classObj.Year);
         classObj.Price = parseFloat(classObj.Price);
         return classObj;
       });
@@ -104,7 +110,7 @@ function getTemplate(classObj) {
     <span class="cs-time">
       <img class="cs-icon" src="img/clock.svg" alt="icon" width="24" height="24" loading="lazy"
         decoding="async">
-      ${classObj.Time}
+      <b>${classObj.Year}</b>, ${classObj.Time}
     </span>
     <span class="cs-description">
       <img class="cs-icon" src="img/note.svg" alt="icon" width="24" height="24" loading="lazy"
@@ -119,6 +125,12 @@ function getTemplate(classObj) {
 function checkCriteria(classObj) {
   if (price_from != null && price_to != null && price_from != "" && price_to != "") {
     if (classObj.Price < price_from || classObj.Price > price_to) {
+      return false;
+    }
+  }
+
+  if (years != null) {
+    if (!years.includes(classObj.Year)) {
       return false;
     }
   }
@@ -155,6 +167,19 @@ function displayClasses() {
     subjects = Array.from(subjectList);
   }
 
+  var yearsListDiv = document.getElementById("years-list");
+  for (var year of yearsList) {
+    var yearCheckbox = `<div class="checkbox cs-text">
+  <input name="class-filter-year" type="checkbox" value="${year}" id="class-filter-year_${year}">
+  <label for="class-filter-year_${year}">${year}</label>
+</div>`
+    yearsListDiv.innerHTML += yearCheckbox;
+  }
+
+  if (years == null) {
+    years = Array.from(yearsList);
+  }
+
   var classesList = document.getElementById("class-list");
   for (var classObj of classes) {
     if (checkCriteria(classObj)) {
@@ -164,12 +189,24 @@ function displayClasses() {
   }
 
   checkSubjects();
+  checkYears();
 }
 
 function checkSubjects() {
   var checkboxes = document.querySelectorAll("input[name='class-filter-subject']");
   for (var checkbox of checkboxes) {
     if (subjects.includes(checkbox.value)) {
+      checkbox.checked = true;
+    } else {
+      checkbox.checked = false;
+    }
+  }
+}
+
+function checkYears() {
+  var checkboxes = document.querySelectorAll("input[name='class-filter-year']");
+  for (var checkbox of checkboxes) {
+    if (years.includes(checkbox.value)) {
       checkbox.checked = true;
     } else {
       checkbox.checked = false;
@@ -218,10 +255,18 @@ searchbtn.addEventListener("click", function () {
   var price_from = document.querySelector("input[name='class-filter-price']:checked").getAttribute("from");
   var price_to = document.querySelector("input[name='class-filter-price']:checked").getAttribute("to");
   var subjects = [];
+  var years = [];
   var checkboxes = document.querySelectorAll("input[name='class-filter-subject']");
   for (var checkbox of checkboxes) {
     if (checkbox.checked) {
       subjects.push(checkbox.value);
+    }
+  }
+
+  var checkboxes = document.querySelectorAll("input[name='class-filter-year']");
+  for (var checkbox of checkboxes) {
+    if (checkbox.checked) {
+      years.push(checkbox.value);
     }
   }
 
@@ -231,5 +276,6 @@ searchbtn.addEventListener("click", function () {
   params.set("price_from", price_from);
   params.set("price_to", price_to);
   params.set("subjects", subjects.join(","));
+  params.set("years", years.join(","));
   window.location.search = params.toString();
 });

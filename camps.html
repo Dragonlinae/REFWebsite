@@ -1,0 +1,217 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <title>Ripple Effects Foundation</title>
+  <link rel="stylesheet" type="text/css" href="css/core.css">
+  <link rel="stylesheet" type="text/css" href="css/style.css">
+</head>
+
+<body>
+
+  <!-- ============================================ -->
+  <!--                 Navigation                   -->
+  <!-- ============================================ -->
+
+  <header id="cs-navigation">
+    <div class="cs-container">
+      <!--Nav Logo-->
+      <a href="index.html" class="cs-logo" aria-label="back to home">
+        <img src="img/logo.jpg" alt="logo" aria-hidden="true" decoding="async">
+      </a>
+      <!--Navigation List-->
+      <nav class="cs-nav" role="navigation">
+        <!--Mobile Nav Toggle-->
+        <button class="cs-toggle" aria-label="mobile menu toggle">
+          <div class="cs-box" aria-hidden="true">
+            <span class="cs-line cs-line1" aria-hidden="true"></span>
+            <span class="cs-line cs-line2" aria-hidden="true"></span>
+            <span class="cs-line cs-line3" aria-hidden="true"></span>
+          </div>
+        </button>
+        <!-- We need a wrapper div so we can set a fixed height on the cs-ul in case the nav list gets too long from too many dropdowns being opened and needs to have an overflow scroll. This wrapper acts as the background so it can go the full height of the screen and not cut off any overflowing nav items while the cs-ul stops short of the bottom of the screen, which keeps all nav items in view no matter how mnay there are-->
+        <div class="cs-ul-wrapper">
+          <ul id="cs-expanded" class="cs-ul" aria-expanded="false">
+            <li class="cs-li">
+              <a href="index.html" class="cs-li-link">
+                Home
+              </a>
+            </li>
+            <li class="cs-li">
+              <a href="about.html" class="cs-li-link">
+                About
+              </a>
+            </li>
+            <li class="cs-li">
+              <a href="volunteer.html" class="cs-li-link">
+                Volunteering Opportunities
+              </a>
+            </li>
+            <li class="cs-li">
+              <a href="camps.html" class="cs-li-link cs-active">
+                Camps
+              </a>
+            </li>
+            <li class="cs-li">
+              <a href="workshops.html" class="cs-li-link">
+                Workshops
+              </a>
+            </li>
+            <li class="cs-li">
+              <a href="support.html" class="cs-li-link">
+                Support Us
+              </a>
+            </li>
+            <li class="cs-li">
+              <a href="classes.html" class="cs-li-link cs-button-solid">Classes ⎘</a>
+            </li>
+          </ul>
+        </div>
+      </nav>
+    </div>
+  </header>
+
+  <!-- ============================================ -->
+  <!--                    Events                    -->
+  <!-- ============================================ -->
+
+  <section id="events">
+    <div class="cs-container">
+      <div class="cs-content">
+        <span class="cs-topper">Events</span>
+        <h2 class="cs-title">Camps</h2>
+        <p class="cs-text">
+          Description about the camps
+        </p>
+      </div>
+      <div class="cs-image-group">
+        <!-- Image 1 -->
+        <a class="cs-item" href="">
+          <picture class="cs-picture">
+            <source media="(max-width: 600px)" srcset="img/Frog1.jpg">
+            <source media="(min-width: 601px)" srcset="img/Frog1.jpg">
+            <img loading="lazy" decoding="async" src="img/Frog1.jpg" alt="fancy house" width="346" height="346">
+          </picture>
+          <!-- Hover Box -->
+          <div class="cs-hover-box">
+            <picture class="cs-icon">
+              <img loading="lazy" decoding="async" src="img/arrow.svg" alt="fancy house" width="20" height="20"
+                aria-hidden="true">
+            </picture>
+            <h3 class="cs-h3">Camp 1</h3>
+            <p class="cs-hover-box-text">
+              Camp 1 Description
+            </p>
+          </div>
+        </a>
+        <!-- Image 2 -->
+        <a class="cs-item" href="">
+          <picture class="cs-picture">
+            <source media="(max-width: 600px)" srcset="img/Frog2.jpg">
+            <source media="(min-width: 601px)" srcset="img/Frog2.jpg">
+            <img loading="lazy" decoding="async" src="img/Frog2.jpg" alt="modern house" width="346" height="346">
+          </picture>
+          <!-- Hover Box -->
+          <div class="cs-hover-box">
+            <picture class="cs-icon">
+              <img loading="lazy" decoding="async" src="img/arrow.svg" alt="fancy house" width="20" height="20"
+                aria-hidden="true">
+            </picture>
+            <h3 class="cs-h3">Camp 2</h3>
+            <p class="cs-hover-box-text">
+              Camp 2 Description
+            </p>
+          </div>
+        </a>
+        <!-- Image 3 -->
+        <a class="cs-item" href="">
+          <picture class="cs-picture">
+            <source media="(max-width: 600px)" srcset="img/Frog3.jpg">
+            <source media="(min-width: 601px)" srcset="img/Frog3.jpg">
+            <img aria-hidden="true" loading="lazy" decoding="async" src="img/Frog3.jpg" alt="modern home at night"
+              width="346" height="346">
+          </picture>
+          <!-- Hover Box -->
+          <div class="cs-hover-box">
+            <picture class="cs-icon">
+              <img loading="lazy" decoding="async" src="img/arrow.svg" alt="fancy house" width="20" height="20"
+                aria-hidden="true">
+            </picture>
+            <h3 class="cs-h3">Camp 3</h3>
+            <p class="cs-hover-box-text">
+              Camp 3 Description
+            </p>
+          </div>
+        </a>
+        <!-- Image 4 -->
+        <a class="cs-item" href="">
+          <picture class="cs-picture">
+            <source media="(max-width: 600px)" srcset="img/Frog4.jpg">
+            <source media="(min-width: 601px)" srcset="img/Frog4.jpg">
+            <img aria-hidden="true" loading="lazy" decoding="async" src="img/Frog4.jpg" alt="modern home" width="346"
+              height="346">
+          </picture>
+          <!-- Hover Box -->
+          <div class="cs-hover-box">
+            <picture class="cs-icon">
+              <img loading="lazy" decoding="async" src="img/arrow.svg" alt="fancy house" width="20" height="20"
+                aria-hidden="true">
+            </picture>
+            <h3 class="cs-h3">Camps 1</h3>
+            <p class="cs-hover-box-text">
+              Camps 1 Description
+            </p>
+          </div>
+        </a>
+        <!-- Image 5 -->
+        <a class="cs-item" href="">
+          <picture class="cs-picture">
+            <source media="(max-width: 600px)" srcset="img/Frog5.jpg">
+            <source media="(min-width: 601px)" srcset="img/Frog5.jpg">
+            <img aria-hidden="true" loading="lazy" decoding="async" src="img/Frog5.jpg" alt="appliance" width="346"
+              height="346">
+          </picture>
+          <!-- Hover Box -->
+          <div class="cs-hover-box">
+            <picture class="cs-icon">
+              <img loading="lazy" decoding="async" src="img/arrow.svg" alt="fancy house" width="20" height="20"
+                aria-hidden="true">
+            </picture>
+            <h3 class="cs-h3">Camps 2</h3>
+            <p class="cs-hover-box-text">
+              Camps 2 Description
+            </p>
+          </div>
+        </a>
+        <!-- Image 6 -->
+        <a class="cs-item" href="">
+          <picture class="cs-picture">
+            <source media="(max-width: 600px)" srcset="img/Frog7.jpg">
+            <source media="(min-width: 601px)" srcset="img/Frog7.jpg">
+            <img aria-hidden="true" loading="lazy" decoding="async" src="img/Frog7.jpg" alt="modern home" width="346"
+              height="346">
+          </picture>
+          <!-- Hover Box -->
+          <div class="cs-hover-box">
+            <picture class="cs-icon">
+              <img loading="lazy" decoding="async" src="img/arrow.svg" alt="fancy house" width="20" height="20"
+                aria-hidden="true">
+            </picture>
+            <h3 class="cs-h3">Camps 3</h3>
+            <p class="cs-hover-box-text">
+              Camps 3 Description
+            </p>
+          </div>
+        </a>
+      </div>
+    </div>
+  </section>
+
+
+
+  <script src="js/script.js"></script>
+
+
+</body>
+
+</html>
