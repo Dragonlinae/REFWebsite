@@ -53,13 +53,28 @@ function getClasses() {
       classes = data.map(row => {
         var classObj = {};
         for (var i = 0; i < headers.length; i++) {
+          if (headers[i].startsWith("Time")) {
+            classObj.Time = row[i];
+            continue;
+          }
           classObj[headers[i]] = row[i];
         }
         classObj.Tags = classObj.Tags.split(",").map(tag => tag.trim());
         for (var tag of classObj.Tags) {
           subjectList.add(tag);
         }
+        // remove leading $ if present
+        if (classObj.Price[0] == "$") {
+          classObj.Price = classObj.Price.slice(1);
+        }
         classObj.Price = parseFloat(classObj.Price);
+
+        if (classObj.Picture && classObj.Picture.startsWith("https://drive.google.com/file/d/")) {
+          var id = classObj.Picture.split("/")[5];
+          classObj.Picture = `https://drive.google.com/thumbnail?id=${id}&sz=w2048`;
+        }
+
+        console.log(classObj);
         return classObj;
       });
 
