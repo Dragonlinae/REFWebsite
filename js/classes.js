@@ -72,7 +72,7 @@ function getClasses() {
 
         if (classObj.Picture && classObj.Picture.startsWith("https://drive.google.com/file/d/")) {
           var id = classObj.Picture.split("/")[5];
-          classObj.Picture = `https://drive.google.com/thumbnail?id=${id}&sz=w2048`;
+          classObj.Picture = `https://drive.google.com/thumbnail?id=${id}&sz=w800`;
         }
 
         console.log(classObj);
