@@ -63,6 +63,7 @@ function getClasses() {
         for (var tag of classObj.Tags) {
           subjectList.add(tag);
         }
+
         // remove leading $ if present
         if (classObj.Price[0] == "$") {
           classObj.Price = classObj.Price.slice(1);
