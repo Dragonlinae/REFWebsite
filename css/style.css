@@ -849,6 +849,31 @@
     background-color: var(--bg-color-2);
   }
 
+  #volunteer dl,
+  #volunteer2 dl,
+  #volunteer3 dl {
+    margin: 0;
+  }
+
+  #volunteer dt,
+  #volunteer2 dt,
+  #volunteer3 dt {
+    font-size: 1.25rem;
+    font-weight: 700;
+    line-height: 1.2em;
+    color: var(--headerColor);
+    margin: 1rem 0 0;
+  }
+
+  #volunteer dd,
+  #volunteer2 dd,
+  #volunteer3 dd {
+    font-size: 1rem;
+    line-height: 1.5em;
+    color: var(--bodyTextColor);
+    margin: 0;
+  }
+
   #volunteer .cs-container,
   #volunteer2 .cs-container,
   #volunteer3 .cs-container {
