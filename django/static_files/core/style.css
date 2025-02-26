@@ -350,7 +350,7 @@
 
   #cs-navigation .cs-li-link {
     /* 14px - 16px */
-    font-size: clamp(0.875rem, 1vw, 1rem);
+    font-size: clamp(1rem, 1.3vw, 1.5rem);
     line-height: 1.5em;
     text-decoration: none;
     margin: 0;
@@ -743,7 +743,7 @@
   }
 
   #about .cs-text-large {
-    font-size: 1.25rem;
+    font-size: 2rem;
     line-height: 1.5em;
     margin: 0 0 0.75rem;
     color: var(--headerColor);
@@ -856,7 +856,7 @@
   #volunteer dt,
   #volunteer2 dt,
   #volunteer3 dt {
-    font-size: 1.25rem;
+    font-size: var(--bodyFontSize);
     font-weight: 700;
     line-height: 1.2em;
     color: var(--headerColor);
@@ -866,7 +866,7 @@
   #volunteer dd,
   #volunteer2 dd,
   #volunteer3 dd {
-    font-size: 1rem;
+    font-size: calc(var(--bodyFontSize) - 0.5rem);
     line-height: 1.5em;
     color: var(--bodyTextColor);
     margin: 0;
@@ -1517,7 +1517,7 @@
 
   #footer-1147 .cs-link {
     /* 14px - 16px */
-    font-size: clamp(0.875rem, 1.5vw, 1rem);
+    font-size: clamp(1rem, 2.5vw, 1.5rem);
     line-height: 1.5em;
     text-decoration: none;
     margin: 0;
