@@ -314,9 +314,7 @@
   }
 
   #cs-navigation .cs-logo {
-    max-width: 21.875rem;
-    height: 4.0625rem;
-    /* margin-right auto pushes everything away from it to the right */
+    max-width: 9.125rem;
     margin: 0 auto 0 0;
     padding: 0;
     display: flex;
