@@ -783,6 +783,57 @@
   #about .cs-button-solid:hover:before {
     width: 100%;
   }
+
+  #about .cs-social {
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 0.5rem;
+  }
+
+  #about .cs-social-li {
+    list-style: none;
+  }
+
+  #about .cs-social-link {
+    width: 4rem;
+    height: 4rem;
+    background-color: #484848;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: background-color 0.3s;
+  }
+
+  #about .cs-social-link:hover {
+    background-color: var(--secondary);
+  }
+
+  #about .cs-social-link:hover .cs-social-icon {
+    filter: grayscale(1) brightness(0);
+    opacity: 1;
+  }
+
+  #about .cs-social-icon {
+    width: 1.5rem;
+    height: auto;
+    display: block;
+  }
+
+  #about .cs-contact {
+    display: flex;
+    margin-bottom: 2rem;
+  }
+
+  #about .cs-contact-icon {
+    width: 1.5rem;
+    height: auto;
+    vertical-align: middle;
+    margin-right: 20px;
+  }
 }
 
 /* Small Desktop - 1024px */
