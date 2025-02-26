@@ -1151,26 +1151,6 @@
     display: block;
   }
 
-  #events .cs-item:hover .cs-hover-box {
-    opacity: 1;
-  }
-
-  #events .cs-item:hover .cs-icon {
-    /* return to original position */
-    transform: rotateY(0);
-  }
-
-  #events .cs-item:hover .cs-h3 {
-    opacity: 1;
-    /* Return to original position */
-    transform: translateY(0);
-  }
-
-  #events .cs-item:hover .cs-hover-box-text {
-    opacity: 1;
-    /* Return to original position */
-    transform: translateY(0);
-  }
 
   #events .cs-picture {
     margin: auto;
@@ -1189,13 +1169,13 @@
     object-fit: cover;
   }
 
-  #events .cs-hover-box {
+  #events .cs-box {
     text-align: center;
     width: 100%;
     height: 100%;
     padding: 1em;
     background-color: var(--secondary);
-    opacity: 0;
+    opacity: 1;
     position: absolute;
     display: flex;
     flex-direction: column;
@@ -1203,14 +1183,9 @@
     justify-content: center;
     /* Prevents padding from contributing to height & width */
     box-sizing: border-box;
-    /* Sets stage for 3d transform animation */
-    perspective: 700px;
     top: 0;
     left: 0;
     z-index: 10;
-    /* prevents mouse from being able to interact with these elements */
-    pointer-events: none;
-    transition: opacity 0.3s;
   }
 
   #events .cs-icon {
@@ -1222,8 +1197,6 @@
     border-radius: 50%;
     background-color: #fff;
     outline: 0.5rem solid rgba(255, 255, 255, 0.7);
-    /* Start with the icon box rotated 90deg */
-    transform: rotateY(90deg);
     position: relative;
     display: inline-flex;
     justify-content: center;
@@ -1239,15 +1212,12 @@
 
   #events .cs-h3 {
     /* 20px - 25px */
-    font-size: clamp(1.25rem, 2vw, 1.5625rem);
+    font-size: clamp(1.75rem, 2vw, 2.5rem);
     line-height: 1.2em;
     font-weight: 700;
     margin: 0 auto;
     max-width: 16.875rem;
     color: #fff;
-    /* make starting position down 10px and invisible */
-    opacity: 0;
-    transform: translateY(0.625rem);
     margin-bottom: 0.5rem;
     transition:
       opacity 0.3s,
@@ -1255,20 +1225,13 @@
     transition-delay: 0.1s;
   }
 
-  #events .cs-hover-box-text {
+  #events .cs-box-text {
     /* 13px - 16px */
-    font-size: clamp(0.8125rem, 1vw, 1rem);
-    line-height: 1.5em;
+    font-size: clamp(1rem, 1.2vw, 2rem);
+    line-height: 1em;
     margin: 0 auto;
     max-width: 16.875rem;
     color: #fff;
-    /* make starting position down 10px and invisible */
-    opacity: 0;
-    transform: translateY(0.625rem);
-    transition:
-      opacity 0.3s,
-      transform 0.3s ease-out;
-    transition-delay: 0.2s;
   }
 }
 
