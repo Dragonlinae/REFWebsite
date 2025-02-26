@@ -435,6 +435,7 @@
     overflow: hidden;
     position: relative;
     z-index: 1;
+    display: flex;
   }
 
   #home .cs-container {
@@ -461,7 +462,7 @@
 
   #home .cs-title,
   #home .cs-text {
-    color: var(--bodyTextColorWhite);
+    color: var(--bodyTextColor);
   }
 
   #home .cs-text {
@@ -537,36 +538,18 @@
 
   #home .cs-background {
     width: 100%;
-    height: 100%;
+    height: auto;
     display: block;
-    position: absolute;
     top: 0;
     left: 0;
     z-index: -2;
-    mask: radial-gradient(30px at bottom, #0000 97%, #000) 50% / 55.5px 100%;
   }
 
-  #home .cs-background:before {
-    /* Overlay */
-    content: "";
-    width: 100%;
-    height: 100%;
-    background: #000;
-    /* prevents the cursor from interacting with it */
-    pointer-events: none;
-    opacity: 0.7;
-    display: block;
-    position: absolute;
-    top: 0;
-    left: 0;
-    z-index: 1;
-  }
 
   #home .cs-background img {
     width: 100%;
     height: 100%;
     object-fit: cover;
-    position: absolute;
     top: 0;
     left: 0;
   }
