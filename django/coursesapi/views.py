@@ -13,8 +13,12 @@ class ReactView(viewsets.ModelViewSet):
     price_to = self.request.query_params.get('price_to', None)
     tags = self.request.query_params.get('tags', None)
     id = self.request.query_params.get('id', None)
+    active = self.request.query_params.get('active', True)
 
-    queryset = Course.objects.filter(active=True)
+    if isinstance(active, str):
+      active = active.lower() == 'true'
+
+    queryset = Course.objects.filter(active=active)
 
     if name:
       queryset = queryset.annotate(

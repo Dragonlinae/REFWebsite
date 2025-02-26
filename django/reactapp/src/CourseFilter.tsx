@@ -8,9 +8,10 @@ import { TagInterface } from "./CourseInterface";
 function CourseFilter() {
   const [searchParams, setSearchParams] = useSearchParams();
   const [tags, setTags] = React.useState<TagInterface[]>([]);
-  const [price, setPrice] = React.useState({ priceFrom: "", priceTo: "" });
-  const [priceChoice, setPriceChoice] = React.useState({ price: "" });
+  // const [price, setPrice] = React.useState({ priceFrom: "", priceTo: "" });
+  // const [priceChoice, setPriceChoice] = React.useState({ price: "" });
   const [tagsChoice, setTagsChoice] = React.useState<{ tags: string[] }>({ tags: [] });
+  const [archive, setArchive] = React.useState(false);
 
   useEffect(() => {
     axios.get('/api/tags').then((response) => {
@@ -21,37 +22,39 @@ function CourseFilter() {
   }, []);
 
   const initializeFilters = () => {
-    const priceFrom = searchParams.get("price_from") || "";
-    const priceTo = searchParams.get("price_to") || "";
+    // const priceFrom = searchParams.get("price_from") || "";
+    // const priceTo = searchParams.get("price_to") || "";
     const tagsChecked = searchParams.get("tags")?.split(",") || [];
+    const archiveOnly = searchParams.get("active") === "false" || false;
 
-    setPrice({ priceFrom: priceFrom, priceTo: priceTo });
-    if (priceFrom === "" && priceTo === "") {
-      setPriceChoice({ price: "" });
-    }
-    else if (priceFrom === "0" && priceTo === "25") {
-      setPriceChoice({ price: "0-25" });
-    }
-    else if (priceFrom === "25" && priceTo === "50") {
-      setPriceChoice({ price: "25-50" });
-    }
-    else if (priceFrom === "50" && priceTo === "100") {
-      setPriceChoice({ price: "50-100" });
-    }
-    else {
-      setPriceChoice({ price: "other" });
-    }
+    // setPrice({ priceFrom: priceFrom, priceTo: priceTo });
+    // if (priceFrom === "" && priceTo === "") {
+    //   setPriceChoice({ price: "" });
+    // }
+    // else if (priceFrom === "0" && priceTo === "25") {
+    //   setPriceChoice({ price: "0-25" });
+    // }
+    // else if (priceFrom === "25" && priceTo === "50") {
+    //   setPriceChoice({ price: "25-50" });
+    // }
+    // else if (priceFrom === "50" && priceTo === "100") {
+    //   setPriceChoice({ price: "50-100" });
+    // }
+    // else {
+    //   setPriceChoice({ price: "other" });
+    // }
     setTagsChoice({ tags: tagsChecked });
+    setArchive(archiveOnly);
   }
 
-  const changePrice = (e: React.ChangeEvent<HTMLInputElement>) => {
-    const { id, value } = e.target;
-    if (id === "class-filter-price_from") {
-      setPrice({ priceFrom: value, priceTo: price.priceTo });
-    } else {
-      setPrice({ priceFrom: price.priceFrom, priceTo: value });
-    }
-  }
+  // const changePrice = (e: React.ChangeEvent<HTMLInputElement>) => {
+  //   const { id, value } = e.target;
+  //   if (id === "class-filter-price_from") {
+  //     setPrice({ priceFrom: value, priceTo: price.priceTo });
+  //   } else {
+  //     setPrice({ priceFrom: price.priceFrom, priceTo: value });
+  //   }
+  // }
 
   const tagChoiceTemplate = (tag: TagInterface) => {
     return (
@@ -74,44 +77,47 @@ function CourseFilter() {
   }
 
 
-  const setFilterPrice = (e: React.ChangeEvent<HTMLInputElement>) => {
-    const { id } = e.target;
-    switch (id) {
-      case "class-filter-price_1":
-        setPrice({ priceFrom: "", priceTo: "" });
-        setPriceChoice({ price: "" });
-        break;
-      case "class-filter-price_2":
-        setPrice({ priceFrom: "0", priceTo: "25" });
-        setPriceChoice({ price: "0-25" });
-        break;
-      case "class-filter-price_3":
-        setPrice({ priceFrom: "25", priceTo: "50" });
-        setPriceChoice({ price: "25-50" });
-        break;
-      case "class-filter-price_4":
-        setPrice({ priceFrom: "50", priceTo: "100" });
-        setPriceChoice({ price: "50-100" });
-        break;
-      case "class-filter-price_5":
-        setPriceChoice({ price: "other" });
-        break;
-    }
-  }
+  // const setFilterPrice = (e: React.ChangeEvent<HTMLInputElement>) => {
+  //   const { id } = e.target;
+  //   switch (id) {
+  //     case "class-filter-price_1":
+  //       setPrice({ priceFrom: "", priceTo: "" });
+  //       setPriceChoice({ price: "" });
+  //       break;
+  //     case "class-filter-price_2":
+  //       setPrice({ priceFrom: "0", priceTo: "25" });
+  //       setPriceChoice({ price: "0-25" });
+  //       break;
+  //     case "class-filter-price_3":
+  //       setPrice({ priceFrom: "25", priceTo: "50" });
+  //       setPriceChoice({ price: "25-50" });
+  //       break;
+  //     case "class-filter-price_4":
+  //       setPrice({ priceFrom: "50", priceTo: "100" });
+  //       setPriceChoice({ price: "50-100" });
+  //       break;
+  //     case "class-filter-price_5":
+  //       setPriceChoice({ price: "other" });
+  //       break;
+  //   }
+  // }
 
   const filterCourses = () => {
     const params = new URLSearchParams();
     if (searchParams.get("name")) {
       params.set("name", searchParams.get("name")!);
     }
-    if (price.priceFrom) {
-      params.set("price_from", price.priceFrom);
-    }
-    if (price.priceTo) {
-      params.set("price_to", price.priceTo);
-    }
+    // if (price.priceFrom) {
+    //   params.set("price_from", price.priceFrom);
+    // }
+    // if (price.priceTo) {
+    //   params.set("price_to", price.priceTo);
+    // }
     if (tags.length > 0) {
       params.set("tags", tagsChoice.tags.join(","));
+    }
+    if (archive) {
+      params.set("active", "false");
     }
     setSearchParams(params, { preventScrollReset: true });
     window.location.href = "/courses?" + params.toString();
@@ -133,7 +139,7 @@ function CourseFilter() {
         <span className="cs-topper">Filters</span>
         <div className="class-filter">
           <div className="filter-categories">
-            <div className="filter-price" onChange={setFilterPrice}>
+            {/* <div className="filter-price" onChange={setFilterPrice}>
               <h3 className="cs-h2">
                 <span>Price</span>
               </h3>
@@ -165,7 +171,7 @@ function CourseFilter() {
                   <input id="class-filter-price_to" type="number" min="0" className="cs-input" placeholder="To" value={price.priceTo} disabled={priceChoice.price !== "other"} />
                 </div>
               </div>
-            </div>
+            </div> */}
 
             <div id="subject-list" className="filter-subject">
               <h3 className="cs-h2">
@@ -175,6 +181,14 @@ function CourseFilter() {
                 {tags.map(tagChoiceTemplate)}
               </ul>
 
+            </div>
+
+            <div id="archive-only" className="filter-archive">
+              <h3 className="cs-h2">
+                <span>Archives</span>
+              </h3>
+              <input type="checkbox" name="class-filter-archive" id="class-filter-archive" checked={archive} onChange={(e) => setArchive(e.target.checked)} />
+              <label htmlFor="class-filter-archive">View archived courses</label>
             </div>
           </div>
 
