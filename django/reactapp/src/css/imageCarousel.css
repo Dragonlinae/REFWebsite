@@ -1,0 +1,66 @@
+.cs-image-gallery {
+  display: block;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  min-width: 30vw;
+  height: 70vh;
+  place-items: center;
+}
+
+.cs-image-gallery-main {
+  display: block;
+  position: relative;
+  justify-content: center;
+  align-items: center;
+  height: 70%;
+  width: 80%;
+}
+
+.cs-image-gallery-main a {
+  position: absolute;
+  opacity: 0;
+  pointer-events: none;
+  left: 0;
+  right: 0;
+  margin-inline: auto;
+  width: max-content;
+  height: 100%;
+  object-fit: cover;
+  transition: opacity 1s;
+}
+
+.cs-image-gallery-main img {
+  object-fit: cover;
+  height: 100%;
+}
+
+.cs-image-gallery-main a:target {
+  opacity: 1;
+  pointer-events: unset;
+}
+
+.cs-image-gallery-main a:target~a#default {
+  opacity: 0;
+  pointer-events: none;
+}
+
+.cs-image-gallery-main a#default {
+  opacity: 1;
+  pointer-events: unset;
+}
+
+.cs-image-gallery-thumbs {
+  display: flex;
+  align-items: center;
+  width: 80%;
+  height: 30%;
+  overflow: scroll hidden;
+}
+
+.cs-image-gallery-thumb {
+  width: 80px;
+  height: 80px;
+  margin: 0 10px;
+  cursor: pointer;
+}

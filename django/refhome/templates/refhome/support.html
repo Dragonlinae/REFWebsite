@@ -1,0 +1,36 @@
+{% extends "refhome/base.html" %}
+
+{% block content %}
+
+<!-- ============================================ -->
+<!--                    Support                   -->
+<!-- ============================================ -->
+
+<section id="support">
+  <div class="cs-container">
+    <div class="cs-content">
+      <span class="cs-topper">Support</span>
+      <h2 class="cs-title">Support the Ripple Effects Foundation!</h2>
+      <p class="cs-text">
+        Thank you for choosing to support us!
+        <br>
+        Ripple Effects Foundation is a 501(c)3 non-profit organization, EIN
+        99-1209119 and all donations are tax-exempt.
+      </p>
+      <h2 class="cs-topper">Fundraiser 1</h2>
+      <p class="cs-text">
+        Method for Fundraising
+      </p>
+    </div>
+  </div>
+  <!--Background Image-->
+  <picture class="cs-background">
+    <source media="(max-width: 600px)" srcset="/static/img/FrogBusiness.jpg">
+    <source media="(min-width: 601px)" srcset="/static/img/FrogBusiness.jpg">
+    <img loading="lazy" decoding="async" src="/static/img/FrogBusiness.jpg" alt="meeting" width="1920" height="486"
+      aria-hidden="true">
+  </picture>
+</section>
+
+
+{% endblock %}

@@ -1,0 +1,37 @@
+{% extends "refhome/base.html" %}
+
+{% block content %}
+
+<!-- ============================================ -->
+<!--                  Home                        -->
+<!-- ============================================ -->
+
+<section id="home">
+  <div class="cs-container">
+    <div class="cs-content">
+      <!-- <span class="cs-topper">Slogan Here</span> -->
+      <h1 class="cs-title gradient-text">Ripple Effects Foundation</h1>
+      <p class="cs-text">
+        Empowering Youth, Inspiring Change: Creating a Ripple of Impact Worldwide
+      </p>
+      <div class="cs-button-row">
+        <div class="cs-button-group">
+          <a href="/home/support" class="cs-button-solid cs-button1">Donate</a>
+        </div>
+        <div class="cs-button-group">
+          <a href="/courses" class="cs-button-solid cs-button1">Find Classes</a>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Background Image -->
+  <picture class="cs-background">
+    <source media="(max-width: 600px)" srcset="/static/img/FrogBuilding.jpg">
+    <source media="(min-width: 601px)" srcset="/static/img/FrogBuilding.jpg">
+    <img loading="lazy" decoding="async" src="/static/img/FrogBuilding.jpg" alt="field" width="1920" height="1200"
+      aria-hidden="true">
+  </picture>
+</section>
+
+{% endblock %}

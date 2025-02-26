@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <title>Ripple Effects Foundation</title>
+  {% load static %}
+  <link rel="stylesheet" href="{% static 'core/core.css' %}">
+  <link rel="stylesheet" href="{% static 'core/style.css' %}">
+  <link rel="icon" type="image/x-icon" href="{% static 'favicon.ico' %}">
+</head>
+
+<body>
+  {% include 'refhome/navbar.html' %}
+
+  {% block content %}
+  {% endblock %}
+
+  {% include 'refhome/footer.html' %}
+
+  {% block scripts %}
+  {% endblock %}
+</body>
+
+</html>
