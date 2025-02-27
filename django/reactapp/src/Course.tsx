@@ -29,7 +29,7 @@ function Course() {
         <img src="/static/img/logo.jpg" alt="logo" aria-hidden="true" decoding="async" />
       </a>
       <a href={course.application_page} className="cs-li-link cs-button-solid cs-top-right" aria-label="back to home">
-        Apply Now
+        Register Now
       </a>
       <section id="classes">
 
